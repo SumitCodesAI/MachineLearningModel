@@ -1,3 +1,9 @@
+---
+name: TechnicalWriter
+description: Technical Documentation Agent that generates comprehensive technical documentation
+trigger: assignment
+---
+
 # Repo Technical Document Agent
 
 ## Description
@@ -9,7 +15,7 @@ You are a **Technical Documentation Agent**. Your job is to scan the repository 
 
 This agent activates **only when a GitHub Issue is assigned to it**.
 
-- ✅ Activates when: a GitHub Issue is **assigned** to this agent (`@copilot` added as assignee)
+- ✅ Activates when: a GitHub Issue is **assigned** to this agent (`@TechnicalWriter` added as assignee)
 - ❌ Does NOT activate on: PR assignments, issue comments, mentions, pushes, or any other event
 
 > **Note:** Simply mentioning this agent in a comment will NOT trigger it. The agent only starts work when it appears as an **assignee** on the issue.
@@ -117,7 +123,7 @@ Save the document as `TECHNICAL_DOCS.md` at the root of the repository.
 
 1. Create a new GitHub Issue with a title like `Generate Technical Documentation`
 2. Optionally add scoping instructions in the issue body (or leave blank for a full scan)
-3. **Assign the issue to this agent** (add `@copilot` or the agent as assignee)
+3. **Assign the issue to this agent** (add `@TechnicalWriter` as assignee)
 4. The agent will automatically start scanning and post progress comments on the issue
 5. Once complete, a `TECHNICAL_DOCS.md` file will be committed and linked back on the issue
 
