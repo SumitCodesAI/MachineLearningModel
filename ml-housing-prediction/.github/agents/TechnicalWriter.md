@@ -1,7 +1,6 @@
 ---
 name: TechnicalWriter
 description: Technical Documentation Agent that generates comprehensive technical documentation
-trigger: assignment
 ---
 
 # Repo Technical Document Agent
