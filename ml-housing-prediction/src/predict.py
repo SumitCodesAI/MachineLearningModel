@@ -61,11 +61,11 @@ class ModelPredictor:
         Returns:
             Predicted price
         """
+        # Use DataFrame with feature names to avoid sklearn warnings about feature names
         if isinstance(features, dict):
-            # Convert dict to array in correct order
-            features_array = np.array([features[f] for f in self.feature_names]).reshape(1, -1)
+            features_array = pd.DataFrame([features], columns=self.feature_names)
         else:
-            features_array = np.array(features).reshape(1, -1)
+            features_array = pd.DataFrame([features], columns=self.feature_names)
         
         # Scale features
         scaled_features = self.scaler.transform(features_array)
